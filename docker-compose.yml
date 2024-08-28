@@ -1,0 +1,15 @@
+version: '4'
+
+services:
+  postgresql:
+    image: postgres
+    container_name: testwork
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_USER=testwork
+      - POSTGRES_PASSWORD=testwork
+      - POSTGRES_DATABASE=testwork
+    command: postgres
+    restart: always
